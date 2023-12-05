@@ -1,27 +1,35 @@
+import Directory from './components/directory/directory.component';
+
 const App = () => {
   const categories = [
-    { id: 1, title: 'Hats' },
-    { id: 2, title: 'Jackets' },
-    { id: 3, title: 'Sneakers' },
-    { id: 4, title: 'Ladies' },
-    { id: 5, title: 'Men' },
+    {
+      id: 1,
+      title: 'Hats',
+      imageURL: 'https://i.ibb.co/cvpntL1/hats.png',
+    },
+    {
+      id: 2,
+      title: 'Jackets',
+      imageURL: 'https://i.ibb.co/px2tCc3/jackets.png',
+    },
+    {
+      id: 3,
+      title: 'Sneakers',
+      imageURL: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+    },
+    {
+      id: 4,
+      title: 'Ladies',
+      imageURL: 'https://i.ibb.co/GCCdy8t/womens.png',
+    },
+    {
+      id: 5,
+      title: 'Men',
+      imageURL: 'https://i.ibb.co/R70vBrQ/men.png',
+    },
   ];
 
-  return (
-    <div className="categories-container">
-      {categories.map((category) => {
-        return (
-          <div key={category.id} className="category-container">
-            <div className="background-image" />
-            <div className="category-body-container">
-              <h2>{category.title}</h2>
-              <p>Shop Now</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
+  return <Directory categories={categories} />;
 };
 
 export default App;
